@@ -17,18 +17,15 @@ export default class App extends Component {
   }
 
   handleChange(e){
-    var whatToChange = e.target.name;
-    var changeTo = e.target.value;
-
-    var stateCopy = this.state;
-    stateCopy[whatToChange] = changeTo;
-    this.setState({stateCopy});
+     this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
   render() {
     return (
       <div>
-        <LandField />
+        <LandField currentTool={this.state.currentTool} />
         <Sidebar currentTool={this.state.currentTool}
                  handleChange={this.handleChange} />
       </div>      

@@ -8,14 +8,30 @@ export default class Field extends Component {
     super(props);
     
     this.state = {
+      water: false
+    }
 
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange() {
+    var tool;
+    switch (this.props.currentTool) {
+      case 'water':
+        tool = 'water';
+        this.setState({'water': !this.state['water']});
+        setTimeout(() => {this.setState({'water': !this.state['water']})}, 3000);
+        break;
+      default:
+        break;
     }
   }
 
-
   render() {
     return (
-      <div className="Field">
+      <div onClick={this.handleChange} className={
+                  'Field '+ (this.state.water ? 'water' : '')
+                }>
         
       </div>      
     );

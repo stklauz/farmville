@@ -16,12 +16,12 @@ export default class Landfield extends Component {
     this.renderColumns = this.renderColumns.bind(this);
   }
 
-  renderRows() {
+  renderRows(columnNumber) {
     var rowsNum = 5;
     var list = [];
 
     for (var i = 0; i < rowsNum; i++) {
-      var field = <Field />;
+      var field = <Field {...this.props} key={ 'field' + columnNumber + String(i) } />;
       list.push(field);
     }
     
@@ -34,7 +34,7 @@ export default class Landfield extends Component {
     var list = [];
 
     for (var i = 0; i < columnsNum; i++){
-      var row = <div className="Landfield-row">{this.renderRows()}</div>;
+      var row = <div key={'fieldRow' + i} className="Landfield-row">{this.renderRows(i)}</div>;
       list.push(row);
     }
 

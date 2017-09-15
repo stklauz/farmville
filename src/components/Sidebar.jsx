@@ -12,7 +12,7 @@ export default class Sidebar extends Component {
   render() {
     return (
       <div className="Sidebar">
-        {this.props.currentTool || 'lol'}
+        <p>{this.props.currentTool || 'lol'}</p>
         <button name="currentTool" value="water" onClick={this.props.handleChange}>
           water
         </button>
