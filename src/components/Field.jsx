@@ -19,8 +19,8 @@ export default class Field extends Component {
     switch (this.props.currentTool) {
       case 'water':
         tool = 'water';
-        this.setState({'water': !this.state['water']});
-        setTimeout(() => {this.setState({'water': !this.state['water']})}, 3000);
+        this.setState({'water': true});
+        setTimeout(() => {this.setState({'water': false})}, 3000);
         break;
       default:
         break;
