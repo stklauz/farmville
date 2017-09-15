@@ -1,0 +1,26 @@
+.Landfield {
+	background-color: #362A2A;
+	display: flex;
+	flex-direction: column;
+	float: left;
+	justify-content: center;
+	height: 100vh;
+	padding: 1rem;
+	width: 75%; 
+}
+
+.Landfield-row {
+	margin: 0 auto;
+}
+
+@media all and (max-width: 500px) {
+	.Landfield {
+		width: 50%;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.Landfield {
+		width: 75%;
+	}
+}

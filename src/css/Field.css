@@ -1,0 +1,7 @@
+.Field {
+	background: pink;
+	border: 1px solid white;
+	display: table-cell;
+	height: 3rem;
+	width: 3rem;
+}
