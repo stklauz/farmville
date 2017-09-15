@@ -17,14 +17,12 @@ export default class App extends Component {
   }
 
   handleChange(e){
-    if(e){
-          var whatToChange = e.target.name;
+    var whatToChange = e.target.name;
     var changeTo = e.target.value;
 
     var stateCopy = this.state;
     stateCopy[whatToChange] = changeTo;
     this.setState({stateCopy});
-    }
   }
 
   render() {
